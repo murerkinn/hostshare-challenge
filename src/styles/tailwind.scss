@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .container {
+    max-width: 1440px;
+    padding: 0 10px;
+    margin: auto;
+
+    @media screen and (min-width: 640px) {
+      padding: 0 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 0 40px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding: 0 60px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding: 0 80px;
+    }
+  }
+}
