@@ -1,0 +1,33 @@
+@layer components {
+  .btn {
+    @apply flex h-max w-max cursor-pointer flex-row rounded-full bg-transparent p-3 text-sm font-medium outline-none transition-all;
+
+    &:hover {
+      @apply bg-btn-hover;
+    }
+
+    &-primary {
+      @apply rounded-lg bg-primary text-white;
+    }
+
+    &-secondary {
+      @apply rounded-lg border border-text-gray bg-white;
+    }
+
+    &-link {
+      @apply rounded-lg bg-transparent p-2;
+
+      &:hover {
+        @apply bg-transparent;
+      }
+
+      span {
+        @apply underline;
+      }
+    }
+
+    &-lg {
+      @apply px-6 text-base;
+    }
+  }
+}
