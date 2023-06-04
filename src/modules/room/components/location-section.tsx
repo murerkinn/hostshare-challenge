@@ -54,7 +54,7 @@ const LocationSection = ({ location }: LocationSectionProps) => {
         </div>
       </div>
 
-      <button className="btn btn-link">
+      <button className="btn btn-link btn-lg pl-0">
         <span>Show more</span>
       </button>
     </section>
