@@ -61,6 +61,16 @@ export type ListingImages = {
   data: Image[]
 }
 
+export type ListingDetail = {
+  type: string
+  value: number
+}
+
+export type ListingDetails = {
+  count: number
+  data: ListingDetail[]
+}
+
 type ListingInfo = {
   id: string
   available: boolean
@@ -77,6 +87,7 @@ type ListingInfo = {
   host: Host
   ratings: Ratings
   visibleReviewCount: number
+  details: ListingDetails
 }
 
 export type Listing = {
