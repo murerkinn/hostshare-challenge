@@ -16,8 +16,6 @@ import { Listing } from '@/modules/room/types'
 const RoomDetailsPage = ({
   room,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  console.log('ROOM', room)
-
   return (
     <>
       <Header />
