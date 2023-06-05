@@ -5,9 +5,13 @@ import SearchBar from './search-bar'
 
 type HeaderProps = {
   isFullWidth?: boolean
+  isSearchBarVisible?: boolean
 }
 
-const Header = ({ isFullWidth = false }: HeaderProps) => {
+const Header = ({
+  isFullWidth = false,
+  isSearchBarVisible = true,
+}: HeaderProps) => {
   return (
     <header className="header border-b border-b-border-light-gray bg-white py-4">
       <div className={cn(!isFullWidth && 'container')}>
@@ -20,7 +24,7 @@ const Header = ({ isFullWidth = false }: HeaderProps) => {
             />
           </Link>
 
-          <SearchBar />
+          {isSearchBarVisible && <SearchBar />}
 
           <div className="flex flex-row gap-1">
             <Link href="/" className="btn">
