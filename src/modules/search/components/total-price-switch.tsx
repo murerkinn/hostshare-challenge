@@ -2,11 +2,20 @@ import { Switch } from '@headlessui/react'
 import cn from 'classnames'
 import { useState } from 'react'
 
-const TotalPriceSwitch = () => {
+type TotalPriceSwitchProps = {
+  containerClassName?: string
+}
+
+const TotalPriceSwitch = ({ containerClassName }: TotalPriceSwitchProps) => {
   const [enabled, setEnabled] = useState(false)
 
   return (
-    <div className="mx-auto flex max-w-[50%] flex-row items-center justify-between rounded-xl border border-border-gray p-4">
+    <div
+      className={cn(
+        'mx-auto flex max-w-[50%] flex-row items-center justify-between rounded-xl border border-border-gray p-4',
+        containerClassName
+      )}
+    >
       <div>
         <span className="text-base font-medium">Display total price</span>
         <span className="ml-3 border-l border-l-border-gray pl-4 text-base">
