@@ -24,7 +24,7 @@ const SearchResultItem = ({ listing }: SearchResultItemProps) => {
     <Link className="block" href={`/rooms/${listing.info.id}`}>
       <div className="relative mb-3 overflow-hidden rounded-xl w-full h-full max-h-[300px]">
         {listing.info.host?.isSuperHost && (
-          <div className="absolute rounded-md top-5 left-5 bg-white font-medium p-1 z-10">
+          <div className="absolute rounded-sm top-5 left-5 bg-white font-medium py-1 px-2 text-sm z-10">
             Superhost
           </div>
         )}
