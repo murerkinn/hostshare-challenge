@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+
 import { Host, ListingDetails } from '../types'
 
 type RoomDetailsSectionProps = {
@@ -18,7 +20,7 @@ const RoomDetailsSection = ({
           <h2 className="text-section-title font-medium mb-2">{title}</h2>
           <div className="flex flex-row items-center">
             {details.data.map((detail, index) => (
-              <>
+              <Fragment key={detail.type}>
                 <span>
                   {detail.value} {detail.type}
                 </span>
@@ -26,7 +28,7 @@ const RoomDetailsSection = ({
                 {index !== details.data.length - 1 && (
                   <span className="mx-2">·</span>
                 )}
-              </>
+              </Fragment>
             ))}
           </div>
         </div>
