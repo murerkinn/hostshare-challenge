@@ -48,7 +48,7 @@ const RoomDetailsPage = ({
 
             <div className="ml-[8.33333%] basis-4/12">
               <div className="sticky top-20">
-                <div className="mt-12">
+                <div className="mt-12 pb-12">
                   <ReservationDetailsCard
                     visibleReviewCount={room.info.visibleReviewCount}
                     nightlyPrice={room.info.price}
