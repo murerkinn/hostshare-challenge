@@ -1,4 +1,5 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { NextSeo } from 'next-seo'
 
 import Footer from '@/components/footer'
 import Header from '@/components/header'
@@ -18,6 +19,11 @@ const RoomDetailsPage = ({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <>
+      <NextSeo
+        title={`${room.info.title} - ${room.info.type} for Rent - Hostshare`}
+        description={room.info.description}
+      />
+
       <Header />
 
       <main>
