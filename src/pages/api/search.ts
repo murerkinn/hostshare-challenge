@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
+import listingsData from '@/data/listings.json'
+
 type ResponseData = {
   message: string
 }
@@ -12,5 +14,15 @@ export default function handler(
     return res.status(405).json({ message: 'Method not allowed' })
   }
 
-  res.status(200).json({ message: 'Hello from Next.js!' })
+  const page = Number(req.query.page) || 1
+  const limit = Number(req.query.limit) || 20
+
+  const listings = (listingsData as any).data.slice(page - 1, page * limit)
+
+  const result = {
+    listings: listings,
+    count: listingsData.count,
+  }
+
+  res.status(200).json(result)
 }

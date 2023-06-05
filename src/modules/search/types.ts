@@ -15,4 +15,9 @@ export interface SearchStoreState {
   checkoutDate: string
   adultCount: number
   childCount: number
+  country: string
+  page: number
+  limit: number
+  search: (reset?: boolean) => Promise<void>
+  setQuery: (query: Record<string, string | number>) => void
 }
