@@ -1,20 +1,24 @@
 import Link from 'next/link'
 
-const HostDetailsSection = () => {
+import { Host } from '../types'
+
+type HostDetailsSectionProps = {
+  host: Host
+}
+
+const HostDetailsSection = ({ host }: HostDetailsSectionProps) => {
   return (
     <section className="border-t border-t-border-gray py-12">
       <div className="max-w-md">
         <div className="mb-6 flex flex-row items-center gap-4">
           <img
-            src="https://a0.muscache.com/im/pictures/user/0e5931b4-3ba6-4f62-ae9f-170235aeee93.jpg?im_w=240"
-            alt=""
+            src={host.avatar.url}
+            alt={`${host.name} Avatar`}
             className="h-16 w-16 rounded-full"
           />
 
           <div>
-            <h2 className="mb-2 text-section-title font-medium">
-              Hosted by Natali and Scott
-            </h2>
+            <h2 className="mb-2 text-section-title font-medium">{host.name}</h2>
             <p className="font-light" style={{ color: 'rgb(113, 113, 113)' }}>
               Joined in October 2016
             </p>
