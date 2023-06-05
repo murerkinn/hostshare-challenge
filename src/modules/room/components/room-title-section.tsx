@@ -12,7 +12,7 @@ const RoomTitleSection = ({
   location,
 }: RoomTitleSectionProps) => {
   return (
-    <section className="py-6">
+    <section className="py-6 border-b border-b-border-mid-gray md:border-b-0">
       <h1 className="mb-1 text-2xl font-semibold">{title}</h1>
 
       <div className="flex flex-row justify-between">
@@ -36,7 +36,7 @@ const RoomTitleSection = ({
           </button>
         </div>
 
-        <div className="flex flex-row gap-5">
+        <div className="md:flex flex-row gap-5 hidden">
           <button className="btn btn-link">
             <span>Share</span>
           </button>

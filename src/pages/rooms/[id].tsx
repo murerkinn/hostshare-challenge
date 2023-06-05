@@ -1,6 +1,13 @@
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import {
+  faArrowUpFromBracket,
+  faChevronLeft,
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { NextSeo } from 'next-seo'
 
+import Carousel from '@/components/carousel'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import listings from '@/data/listings.json'
@@ -24,9 +31,33 @@ const RoomDetailsPage = ({
         description={room.info.description}
       />
 
-      <Header />
+      <Header hiddenOnMobile />
 
       <main>
+        <div className="flex flex-row justify-between items-center md:hidden bg-transparent absolute top-0 left-0 z-10 w-full p-4">
+          <button className="btn btn-icon-only">
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+
+          <div className="flex flex-row gap-2">
+            <button className="btn btn-icon-only">
+              <FontAwesomeIcon icon={faArrowUpFromBracket} />
+            </button>
+
+            <button className="btn btn-icon-only">
+              <FontAwesomeIcon icon={faHeart} />
+            </button>
+          </div>
+        </div>
+
+        <div className="relative md:hidden h-[200px] w-full">
+          <Carousel
+            images={room.info.images.data}
+            showNavigation={false}
+            showCounter
+          />
+        </div>
+
         <div className="container">
           <RoomTitleSection
             title={room.info.title}
@@ -36,7 +67,7 @@ const RoomDetailsPage = ({
           <ImageGallery images={room.info.images.data} />
 
           <div className="flex flex-row">
-            <div className="basis-7/12">
+            <div className="md:basis-7/12 basis-full">
               <RoomDetailsSection
                 details={room.info.details}
                 title={room.info.title}
@@ -46,7 +77,7 @@ const RoomDetailsPage = ({
               <AmenitiesSection amenities={room.info.amenities} />
             </div>
 
-            <div className="ml-[8.33333%] basis-4/12">
+            <div className="hidden md:block ml-[8.33333%] basis-4/12">
               <div className="sticky top-20">
                 <div className="mt-12 pb-12">
                   <ReservationDetailsCard

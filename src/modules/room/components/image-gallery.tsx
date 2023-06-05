@@ -13,7 +13,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
   const imagesToShow = images.slice(1, 5)
 
   return (
-    <section className="relative">
+    <section className="hidden md:block relative">
       <div className="grid grid-cols-2 gap-2 overflow-hidden rounded-xl">
         <div>
           <button className={buttonClasses}>

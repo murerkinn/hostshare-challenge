@@ -27,7 +27,7 @@ const LocationSection = ({ location }: LocationSectionProps) => {
   }
 
   return (
-    <section className="border-t border-t-border-gray py-12">
+    <section className="border-t border-t-border-gray md:py-12 pb-6 pt-8">
       <h2 className="mb-6 text-section-title font-medium">Where you'll be</h2>
 
       <p className="mb-6 text-base">
@@ -35,7 +35,7 @@ const LocationSection = ({ location }: LocationSectionProps) => {
       </p>
 
       <div className="relative mb-8">
-        <div className="h-[480px] w-full">
+        <div className="h-[240px] md:h-[480px] w-full">
           <GoogleMapReact
             bootstrapURLKeys={{ key: '' }}
             defaultCenter={defaultProps.center}

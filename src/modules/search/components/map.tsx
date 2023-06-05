@@ -61,7 +61,7 @@ const Map = ({ listings }: MapProps) => {
 
       <div className="absolute top-4 flex flex-row justify-between w-full px-4">
         <button
-          className="btn btn-secondary rounded-lg border-0 items-center justify-center w-10 h-10"
+          className="btn btn-icon-only rounded-lg w-10 h-10"
           style={{ boxShadow: '0 6px 16px rgba(0,0,0,0.12)' }}
         >
           <FontAwesomeIcon icon={faChevronLeft} />
@@ -73,14 +73,14 @@ const Map = ({ listings }: MapProps) => {
         >
           <button
             onClick={handleZoomIncrease}
-            className="btn btn-secondary border-0 p-0 w-10 h-10 items-center justify-center border-b border-b-border-mid-gray rounded-none"
+            className="btn btn-icon-only w-10 h-10 border-b border-b-border-mid-gray rounded-none"
           >
             <FontAwesomeIcon icon={faPlus} />
           </button>
 
           <button
             onClick={handleZoomDecrease}
-            className="btn btn-secondary border-0 p-0 w-10 h-10 items-center justify-center"
+            className="btn btn-icon-only w-10 h-10 rounded-none"
           >
             <FontAwesomeIcon icon={faMinus} />
           </button>

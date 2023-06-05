@@ -7,7 +7,7 @@ type AmenitiesSectionProps = {
 
 const AmenitiesSection = ({ amenities }: AmenitiesSectionProps) => {
   return (
-    <section className="py-12">
+    <section className="pb-6 pt-8 md:py-12">
       <h2 className="mb-6 text-section-title font-medium">
         What this place offers
       </h2>
@@ -18,7 +18,7 @@ const AmenitiesSection = ({ amenities }: AmenitiesSectionProps) => {
         ))}
       </div>
 
-      <button className="btn btn-secondary btn-lg mt-6">
+      <button className="btn btn-secondary btn-lg mt-6 w-full md:w-max justify-center">
         Show all {amenities.count} amenities
       </button>
     </section>

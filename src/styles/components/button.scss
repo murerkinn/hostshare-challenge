@@ -26,6 +26,16 @@
       }
     }
 
+    &-icon-only {
+      @apply rounded-full bg-white w-9 h-9 justify-center items-center p-0;
+      box-shadow: 0 0 0 1px transparent, 0 0 0 4px transparent,
+        0 2px 4px rgba(0, 0, 0, 0.18) !important;
+
+      &:hover {
+        @apply bg-btn-hover;
+      }
+    }
+
     &-lg {
       @apply px-6 text-base;
     }

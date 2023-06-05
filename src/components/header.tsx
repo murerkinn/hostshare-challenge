@@ -6,14 +6,21 @@ import SearchBar from './search-bar'
 type HeaderProps = {
   isFullWidth?: boolean
   isSearchBarVisible?: boolean
+  hiddenOnMobile?: boolean
 }
 
 const Header = ({
   isFullWidth = false,
   isSearchBarVisible = true,
+  hiddenOnMobile = false,
 }: HeaderProps) => {
   return (
-    <header className="header border-b border-b-border-light-gray bg-white py-4">
+    <header
+      className={cn(
+        'header border-b border-b-border-light-gray bg-white py-4',
+        hiddenOnMobile && 'hidden md:block'
+      )}
+    >
       <div className={cn(!isFullWidth && 'container')}>
         <div className="flex flex-row items-center justify-between">
           <Link href="/">

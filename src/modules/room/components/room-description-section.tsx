@@ -12,7 +12,7 @@ const RoomDescriptionSection = ({
   const isOver300Chars = description.length > 300
 
   return (
-    <section className="pb-12 pt-8 border-b border-b-border-light-gray">
+    <section className="pb-8 md:pb-12 pt-8 border-b border-b-border-light-gray">
       <ReactMarkdown
         components={{
           p: ({ node, ...props }) => (

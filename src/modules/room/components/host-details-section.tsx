@@ -48,7 +48,10 @@ const HostDetailsSection = ({ host }: HostDetailsSectionProps) => {
           <li>Response time: within an hour</li>
         </ul>
 
-        <Link href="/" className="btn btn-secondary btn-lg mb-6">
+        <Link
+          href="/"
+          className="btn btn-secondary btn-lg mb-6 w-full md:w-max"
+        >
           Contact Host
         </Link>
 
