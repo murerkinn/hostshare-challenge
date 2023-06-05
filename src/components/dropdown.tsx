@@ -9,7 +9,7 @@ type DropdownProps = {
   children: React.ReactNode
   className?: string
   panelClassName?: string
-  placement?: 'bottom-start' | 'bottom-end' | 'top-start' | 'top-end'
+  placement?: 'bottom-start' | 'bottom-end' | 'top-start' | 'top-end' | 'bottom'
 }
 
 const Dropdown = ({
