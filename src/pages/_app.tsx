@@ -1,3 +1,5 @@
+import 'swiper/css'
+import 'swiper/css/navigation'
 import '@/styles/main.scss'
 
 import type { AppProps } from 'next/app'
