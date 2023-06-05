@@ -69,7 +69,9 @@ export const getServerSideProps: GetServerSideProps<{
 }> = async ({ query }) => {
   const roomId = query.id as string
 
-  const room = listings.data.find(r => r.info.id === roomId)
+  const room = (listings as unknown as { data: Listing[] }).data.find(
+    r => r.info.id === roomId
+  )
 
   if (!room) {
     return { notFound: true }
