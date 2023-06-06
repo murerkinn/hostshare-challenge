@@ -3,6 +3,7 @@ import { NextSeo } from 'next-seo'
 import { useEffect } from 'react'
 
 import Header from '@/components/header'
+import CategoriesBar from '@/modules/search/components/categories-bar'
 import SearchResultsGrid from '@/modules/search/components/search-results-grid'
 import TotalPriceSwitch from '@/modules/search/components/total-price-switch'
 import useSearchStore from '@/modules/search/store'
@@ -22,9 +23,14 @@ const HomePage = () => {
         description="Hostshare is a booking platform for renting rooms and properties."
       />
 
-      <Header />
+      <div className="fixed top-0 left-0 z-20 w-full">
+        <Header />
+        <div className="container">
+          <CategoriesBar />
+        </div>
+      </div>
 
-      <main className="pt-6">
+      <main className=" pt-48">
         <TotalPriceSwitch />
 
         <section className="py-6">
