@@ -25,6 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       checkoutDate: query.checkoutDate
         ? dayjs(query.checkoutDate as string).format('YYYY-MM-DD')
         : dayjs().add(1, 'week').format('YYYY-MM-DD'),
+      location: query.location
+        ? decodeURIComponent(query.location as string)
+        : '',
     })
   }, [query])
 

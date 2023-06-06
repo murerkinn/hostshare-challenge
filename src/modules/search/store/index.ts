@@ -13,7 +13,7 @@ const useSearchStore = create<SearchStoreState>((set, get) => ({
   checkoutDate: '2023-08-14',
   adultCount: 1,
   childCount: 0,
-  country: '',
+  location: 'Los Angeles, United States',
   page: 1,
   limit: 20,
   search: async (reset = false) => {
@@ -30,6 +30,7 @@ const useSearchStore = create<SearchStoreState>((set, get) => ({
           checkoutDate: state.checkoutDate,
           adultCount: state.adultCount,
           childCount: state.childCount,
+          location: state.location ? decodeURIComponent(state.location) : '',
         },
       })
 
