@@ -12,10 +12,10 @@ type Props = {
 const DatePickerDropdown = ({ startDate, endDate, onChange }: Props) => {
   return (
     <Dropdown
-      placement="bottom-end"
+      placement="bottom"
       panelClassName="!max-w-none !w-auto"
       trigger={
-        <button>
+        <button className="btn">
           {startDate && endDate
             ? [
                 dayjs(startDate).isValid()

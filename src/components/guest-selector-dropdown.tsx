@@ -31,8 +31,14 @@ const GuestSelectorDropdown = () => {
 
   return (
     <Dropdown
-      trigger={<button>{adultCount + childCount} Guests</button>}
+      trigger={
+        <button className="btn">
+          {adultCount + childCount}{' '}
+          {adultCount + childCount === 1 ? 'Guest' : 'Guests'}
+        </button>
+      }
       panelClassName="!rounded-[32px] w-[400px] overflow-hidden"
+      placement="bottom-end"
     >
       <div className="py-4 px-8">
         <div className="flex flex-row items-center justify-between py-6 border-b border-b-border-mid-gray">
