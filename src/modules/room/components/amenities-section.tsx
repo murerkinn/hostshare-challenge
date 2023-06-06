@@ -14,7 +14,10 @@ const AmenitiesSection = ({ amenities }: AmenitiesSectionProps) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {amenities.data.slice(0, 10).map(amenity => (
-          <AmenityItem amenity={amenity} key={amenity.type} />
+          <AmenityItem
+            amenity={amenity}
+            key={`${amenity.type}-${amenity.title}`}
+          />
         ))}
       </div>
 
