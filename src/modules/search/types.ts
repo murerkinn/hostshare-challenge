@@ -1,6 +1,6 @@
 import { Listing } from '@/modules/room/types'
 
-type Category = {
+export type Category = {
   id: string
   title: string
   type: string

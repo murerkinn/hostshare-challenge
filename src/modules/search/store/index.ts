@@ -37,6 +37,7 @@ const useSearchStore = create<SearchStoreState>((set, get) => ({
         listings: reset ? data.listings : [...state.listings, ...data.listings],
         count: data.count,
         loading: false,
+        categories: data.categories,
       }))
     } catch (e) {
       console.error('Error while searching listings', e)

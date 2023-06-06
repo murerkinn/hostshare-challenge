@@ -2,9 +2,11 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 import rawData from '@/data/listings.json'
 import { Listing } from '@/modules/room/types'
+import { Category } from '@/modules/search/types'
 
 type ListingsData = {
   data: Listing[]
+  categories: Category[]
   count: number
 }
 
@@ -32,11 +34,12 @@ export default function handler(
   const page = Number(req.query.page) || 1
   const limit = Number(req.query.limit) || 20
 
-  const listings = (listingsData as any).data.slice(page - 1, page * limit)
+  const listings = listingsData.data.slice(page - 1, page * limit)
 
   const result = {
     listings: listings,
     count: listingsData.count,
+    categories: listingsData.categories,
   }
 
   res.status(200).json(result)
