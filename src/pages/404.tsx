@@ -6,7 +6,8 @@ import Header from '@/components/header'
 const Custom404Page = () => {
   return (
     <>
-      <Header />
+      <Header isSearchBarVisible={false} actionsMenuHiddenOnMobile />
+
       <main className="py-12">
         <div className="container">
           <div className="flex flex-col-reverse md:flex-row items-center">
