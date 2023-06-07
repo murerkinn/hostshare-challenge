@@ -20,3 +20,14 @@ npm run dev
 - [x] Search page
 - [x] Listing page
 - [x] 404 page
+
+## Technologies
+
+- Typescript
+- NextJS
+- TailwindCSS
+- Axios
+- Eslint and Prettier
+- Zustand
+- Headless UI
+- Font Awesome
