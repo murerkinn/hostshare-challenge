@@ -40,7 +40,9 @@ const LocationSelectorDropdown = () => {
 
   return (
     <Dropdown
-      trigger={<button className="btn">{location}</button>}
+      trigger={
+        <button className="btn">{location || 'Enter a location'}</button>
+      }
       placement="bottom-start"
     >
       <Combobox
@@ -49,10 +51,17 @@ const LocationSelectorDropdown = () => {
           updateQuery({ location: encodeURIComponent(newLocation) })
         }
       >
-        <Combobox.Input onChange={event => setQuery(event.target.value)} />
+        <Combobox.Input
+          onChange={event => setQuery(event.target.value)}
+          placeholder="Enter a location"
+        />
         <Combobox.Options>
           {filteredLocations.map(location => (
-            <Combobox.Option key={location} value={location}>
+            <Combobox.Option
+              key={location}
+              value={location}
+              className="btn rounded-none w-full cursor-pointer"
+            >
               {location}
             </Combobox.Option>
           ))}

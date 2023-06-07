@@ -33,12 +33,28 @@ export default function handler(
 
   const page = Number(req.query.page) || 1
   const limit = Number(req.query.limit) || 20
+  const location = req.query.location
+    ? (req.query.location as string).split(', ')[0]
+    : ''
 
-  const listings = listingsData.data.slice(page - 1, page * limit)
+  const uniqueListings = listingsData.data.filter(
+    (listing, index, self) =>
+      self.findIndex(l => l.info.id === listing.info.id) === index
+  )
+
+  let filteredListings = uniqueListings
+
+  if (location) {
+    filteredListings = uniqueListings.filter(listing =>
+      listing.info.location.city.includes(location)
+    )
+  }
+
+  const listings = filteredListings.slice(page - 1, page * limit)
 
   const result = {
     listings: listings,
-    count: listingsData.count,
+    count: filteredListings.length,
     categories: listingsData.categories,
   }
 
