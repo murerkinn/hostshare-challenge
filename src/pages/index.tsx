@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 
 import Header from '@/components/header'
 import CategoriesBar from '@/modules/search/components/categories-bar'
+import FilterModal from '@/modules/search/components/filter-modal'
 import SearchResultsGrid from '@/modules/search/components/search-results-grid'
 import TotalPriceSwitch from '@/modules/search/components/total-price-switch'
 import useSearchStore from '@/modules/search/store'
@@ -39,6 +40,8 @@ const HomePage = () => {
           </div>
         </section>
       </main>
+
+      <FilterModal />
     </>
   )
 }

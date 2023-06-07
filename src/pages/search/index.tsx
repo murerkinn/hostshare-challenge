@@ -2,6 +2,7 @@ import { NextSeo } from 'next-seo'
 import { useEffect } from 'react'
 
 import Header from '@/components/header'
+import FilterModal from '@/modules/search/components/filter-modal'
 import Map from '@/modules/search/components/map'
 import SearchResultsGrid from '@/modules/search/components/search-results-grid'
 import TotalPriceSwitch from '@/modules/search/components/total-price-switch'
@@ -36,6 +37,8 @@ const SearchPage = () => {
           <Map listings={listings} />
         </div>
       </main>
+
+      <FilterModal />
     </>
   )
 }

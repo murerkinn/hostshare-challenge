@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import updateQuery from '@/lib/update-query'
+
 import useSearchStore from '../store'
 
 const categoryTypeImgMap = {
@@ -118,7 +120,12 @@ const CategoriesBar = () => {
         ))}
       </div>
 
-      <button className="btn btn-secondary flex-1">Filters</button>
+      <button
+        className="btn btn-secondary flex-1"
+        onClick={() => updateQuery({ modal: 'filters' })}
+      >
+        Filters
+      </button>
     </div>
   )
 }
