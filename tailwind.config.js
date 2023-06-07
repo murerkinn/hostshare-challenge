@@ -11,6 +11,7 @@ module.exports = {
         'text-gray': 'rgb(34, 34, 34)',
         'btn-hover': 'rgb(247, 247, 247)',
         'mid-gray': 'rgb(113, 113, 113)',
+        'switch-bg': 'rgb(176, 176, 176)',
       },
       fontSize: {
         xxs: ['10px', '12px'],
