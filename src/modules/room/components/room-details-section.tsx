@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from 'react'
+import { useMemo } from 'react'
 
 import { Host, ListingDetails } from '../types'
 
