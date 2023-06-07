@@ -9,7 +9,7 @@ const Custom404Page = () => {
       <Header />
       <main className="py-12">
         <div className="container">
-          <div className="flex flex-row items-center">
+          <div className="flex flex-col-reverse md:flex-row items-center">
             <div>
               <h1 className="text-2xl font-medium mb-10">
                 We can’t seem to find the page you’re looking for
@@ -46,7 +46,7 @@ const Custom404Page = () => {
               </ul>
             </div>
 
-            <div className="ml-auto mr-40">
+            <div className="mb-10 md:mb-0 md:ml-auto md:mr-40">
               <img
                 src="https://a0.muscache.com/airbnb/static/error_pages/404-Airbnb_final-d652ff855b1335dd3eedc3baa8dc8b69.gif"
                 alt="404 gif"
