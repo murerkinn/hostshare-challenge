@@ -11,14 +11,12 @@ type HeaderProps = {
   isFullWidth?: boolean
   isSearchBarVisible?: boolean
   hiddenOnMobile?: boolean
-  actionsMenuHiddenOnMobile?: boolean
 }
 
 const Header = ({
   isFullWidth = false,
   isSearchBarVisible = true,
   hiddenOnMobile = false,
-  actionsMenuHiddenOnMobile = false,
 }: HeaderProps) => {
   return (
     <header
@@ -33,12 +31,7 @@ const Header = ({
 
           {isSearchBarVisible && <SearchBar />}
 
-          <div
-            className={cn(
-              'flex-row items-center gap-1',
-              actionsMenuHiddenOnMobile ? 'hidden md:flex' : 'flex'
-            )}
-          >
+          <div className="hidden md:flex flex-row items-center gap-1">
             <Link href="/" className="btn">
               Hostshare your home
             </Link>

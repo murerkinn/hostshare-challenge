@@ -31,7 +31,7 @@ const Map = ({ listings }: MapProps) => {
   }
 
   return (
-    <div className="h-full relative">
+    <div className="h-full relative hidden md:block">
       <GoogleMapReact
         bootstrapURLKeys={{ key: '' }}
         defaultCenter={{

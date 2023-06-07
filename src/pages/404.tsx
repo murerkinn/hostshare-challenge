@@ -6,7 +6,7 @@ import Header from '@/components/header'
 const Custom404Page = () => {
   return (
     <>
-      <Header isSearchBarVisible={false} actionsMenuHiddenOnMobile />
+      <Header isSearchBarVisible={false} />
 
       <main className="py-12">
         <div className="container">

@@ -12,7 +12,7 @@ const TotalPriceSwitch = ({ containerClassName }: TotalPriceSwitchProps) => {
   return (
     <div
       className={cn(
-        'mx-auto flex max-w-[50%] flex-row items-center justify-between rounded-xl border border-border-gray p-4',
+        'mx-auto hidden md:flex max-w-[50%] flex-row items-center justify-between rounded-xl border border-border-gray p-4',
         containerClassName
       )}
     >

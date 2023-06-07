@@ -25,11 +25,11 @@ const SearchPage = () => {
 
       <main>
         <div
-          className="grid grid-cols-[9fr_5fr]"
+          className="grid grid-cols-1 md:grid-cols-[9fr_5fr]"
           style={{ height: 'calc(100vh - 80px)', width: '100%' }}
         >
-          <div className="p-6 overflow-y-auto max-w-[900px]">
-            <TotalPriceSwitch containerClassName="max-w-full mb-5" />
+          <div className="p-6 overflow-y-auto md:max-w-[900px]">
+            <TotalPriceSwitch containerClassName="max-w-full mb-5 hidden md:flex" />
             <SearchResultsGrid />
           </div>
 
